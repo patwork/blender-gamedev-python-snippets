@@ -5,7 +5,7 @@ import bpy
 
 for obj in bpy.data.objects:
     if obj.data:
-        name = "%s.%s" % (obj.name, obj.type.lower())
+        name = "%s_%s" % (obj.name, obj.type.lower())
         if obj.data.name != name:
             print("- %s -> %s" % (obj.data.name, name))
             obj.data.name = name
